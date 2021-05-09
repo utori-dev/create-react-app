@@ -16,19 +16,17 @@ export type ParseJsonOptions<T = object> = {
 
 type ParseJsonResult<T = any> = SimpleResult<T>;
 
-function parseJson<T = any>(text: string, options: ParseJsonOptions<T> = {}): Promise<ParseJsonResult<T>> {
-  return new Promise(resolve => {
-    try {
-      const data = JSON.parse(text, options.reviver);
-      (options.validate) ? resolve(options.validate(data)) : resolve({ data });
-    } catch (error) {
-      resolve({
-        type: ResultType.UNKNOWN_ERROR,
-        error,
-        message: `Cannot parse JSON from '${text}'`,
-      });
-    }
-  })
+function parseJson<T = any>(text: string, options: ParseJsonOptions<T> = {}): ParseJsonResult<T> {
+  try {
+    const data = JSON.parse(text, options.reviver);
+    return (options.validate) ? (options.validate(data)) : ({ data });
+  } catch (error) {
+    return {
+      type: ResultType.UNKNOWN_ERROR,
+      error,
+      message: `Cannot parse JSON from '${text}'`,
+    };
+  }
 }
 
 export default parseJson;
