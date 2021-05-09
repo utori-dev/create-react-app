@@ -8,8 +8,9 @@ import { CommandModule } from 'yargs';
 const build: CommandModule = {
   command: 'build',
   describe: 'Builds the project for production',
-  handler: () => {
-    throw new Error('This command is unsupported! See https://github.com/utori-dev/utori-scripts/issues/3 for status.');
+  handler: (args) => {
+    console.log(args)
+    // throw new Error('This command is unsupported! See https://github.com/utori-dev/utori-scripts/issues/3 for status.');
   }
 }
 
