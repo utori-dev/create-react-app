@@ -21,6 +21,7 @@ function getRootDirectory(): string {
  * Resolves a relative path into a complete path from the project's root directory.
  *
  * @param relativePath Path relative to the project's root directory
+ * @todo #9 Add better path handling
  * @returns Complete path
  */
 function resolveProjectPath(relativePath: string): SimpleResult<string> {
