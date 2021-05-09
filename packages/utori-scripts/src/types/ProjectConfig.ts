@@ -6,5 +6,4 @@ export type ProjectConfig = {
   projectType: ProjectType;
   sourceDirectory: string;
   outputDirectory: string;
-  entryFile: string;
 }
