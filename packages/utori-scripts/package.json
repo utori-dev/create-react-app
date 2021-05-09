@@ -1,0 +1,38 @@
+{
+  "name": "utori-scripts",
+  "version": "0.0.0",
+  "description": "Scripts for managing NPM packages",
+  "author": "Michelle Miller <chellimiller@users.noreply.github.com>",
+  "homepage": "https://github.com/utori-dev/utori-scripts#readme",
+  "license": "MIT",
+  "main": "build/index.js",
+  "bin": {
+    "utori-scripts": "./build/index.js"
+  },
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utori-dev/utori-scripts.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "watch": "tsc -w"
+  },
+  "bugs": {
+    "url": "https://github.com/utori-dev/utori-scripts/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "@types/yargs": "^16.0.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "yargs": "^17.0.1"
+  }
+}
