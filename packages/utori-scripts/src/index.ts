@@ -1,21 +1,17 @@
 #!/usr/bin/env node
 
 import YARGS from 'yargs';
+import build from './commands/build';
+import lint from './commands/lint';
+import start from './commands/start';
+import test from './commands/test';
 
 (require('yargs') as typeof YARGS)
   .scriptName('utori-scripts')
   .usage('$0 <cmd> [args]')
-  .command('start [name]', 'welcome ter yargs!',
-    (yargs) => {
-      yargs.positional('name', {
-        type: 'string',
-        default: 'Cambi',
-        describe: 'the name to say hello to'
-      })
-    },
-    (argv) => {
-      console.log('start', 'welcome to yargs!')
-    },
-  )
+  .command(build)
+  .command(lint)
+  .command(start)
+  .command(test)
   .help()
   .argv

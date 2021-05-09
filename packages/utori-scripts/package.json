@@ -5,10 +5,10 @@
   "author": "Michelle Miller <chellimiller@users.noreply.github.com>",
   "homepage": "https://github.com/utori-dev/utori-scripts#readme",
   "license": "MIT",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "type": "commonjs",
   "bin": {
-    "utori-scripts": "./build/index.js"
+    "utori-scripts": "./dist/index.js"
   },
   "directories": {
     "src": "src"
