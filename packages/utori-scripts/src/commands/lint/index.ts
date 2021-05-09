@@ -1,11 +1,12 @@
 import { CommandModule } from 'yargs';
+import { ProjectConfig } from '../../types/ProjectConfig';
 
 /**
  * Command to lint the project managed by `utori-scripts`.
  * 
  * @todo #6 Implement this for `react-web-app`.
  */
-const lint: CommandModule = {
+const lint: CommandModule<{}, ProjectConfig> = {
   command: 'lint',
   describe: 'Runs linting on the project',
   handler: () => {

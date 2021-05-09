@@ -1,11 +1,12 @@
 import { CommandModule } from 'yargs';
+import { ProjectConfig } from '../../types/ProjectConfig';
 
 /**
  * Command to run unit tests the project managed by `utori-scripts`.
  * 
  * @todo #5 Implement this for `react-web-app` and potentially other types.
  */
-const test: CommandModule = {
+const test: CommandModule<{}, ProjectConfig> = {
   command: 'test',
   describe: 'Runs unit tests for the project',
   handler: () => {
