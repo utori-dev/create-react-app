@@ -6,6 +6,7 @@
   "homepage": "https://github.com/utori-dev/utori-scripts#readme",
   "license": "MIT",
   "main": "build/index.js",
+  "type": "commonjs",
   "bin": {
     "utori-scripts": "./build/index.js"
   },
