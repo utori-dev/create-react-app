@@ -1,5 +1,8 @@
 import { ResultType, SimpleResult } from '../types/Result';
 
+/**
+ * Options for parsing a JSON object from text.
+ */
 export type ParseJsonOptions<T = object> = {
   /**
    * A function that validates the results.
@@ -14,9 +17,14 @@ export type ParseJsonOptions<T = object> = {
   reviver?: (this: any, key: string, value: any) => any;
 };
 
-type ParseJsonResult<T = any> = SimpleResult<T>;
-
-function parseJson<T = any>(text: string, options: ParseJsonOptions<T> = {}): ParseJsonResult<T> {
+/**
+ * Parse the provided text into JSON.
+ *
+ * @param text Text to parse into JSON
+ * @param options Options for parsing and validating the JSON
+ * @returns Result from parsing the JSON
+ */
+function parseJson<T = any>(text: string, options: ParseJsonOptions<T> = {}): SimpleResult<T> {
   try {
     const data = JSON.parse(text, options.reviver);
     return (options.validate) ? (options.validate(data)) : ({ data });
