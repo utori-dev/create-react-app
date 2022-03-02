@@ -1,15 +1,13 @@
 {
-  "name": "@utori-dev/util-scripts",
+  "name": "@utori-dev/scripts-core",
   "version": "0.0.0",
   "description": "Utori scripts for utility libraries",
   "author": "Michelle Miller <chellimiller@users.noreply.github.com>",
   "homepage": "https://github.com/utori-dev/utori-scripts#readme",
   "license": "MIT",
   "main": "dist/index.js",
+  "private": true,
   "type": "commonjs",
-  "bin": {
-    "utori-util-scripts": "./dist/index.js"
-  },
   "directories": {
     "src": "src"
   },
@@ -40,7 +38,6 @@
     "typescript": "^4.6.2"
   },
   "dependencies": {
-    "@utori-dev/scripts-core": "0.0.0",
     "yargs": "^17.3.1"
   }
 }
